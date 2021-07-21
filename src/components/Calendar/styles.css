@@ -1,0 +1,238 @@
+:root {
+  --background: ##fefeff;
+  --black: #20222a;
+  --grey: #bbbdbe;
+  --lightgrey: #f4f5f9;
+  --darkYelow: #d1c16a;
+  --ligthYellow: #fefff3;
+  --darkblue: #4f67e0;
+  --lightblue: #8fa6f8;
+  --defaultText: white;
+  --green: #a1df90;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: auto;
+  width: 500;
+  max-width: 500;
+  /* padding: 25px;
+  margin-top: 50px; */
+  margin: 50px 10px 50px 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  background-color: var(--background);
+  border: 1px solid var(--lightgrey);
+}
+
+.container .time-period {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container .time-card {
+  width: 400px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.container .time-card .time-divider {
+  height: 35px;
+  width: 1px;
+  border-right: 2px solid #bbbdbe;
+  margin: 2px;
+}
+
+.container .calendar-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  border-bottom: 1px solid var(--lightgrey);
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+.container .calendar-title span {
+  color: var(--darkblue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.calendar {
+  box-sizing: border-box;
+  font-size: 1rem;
+  max-width: 400px;
+  padding: 5;
+}
+
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: stretch;
+
+  color: var(--black);
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 10px 2px 0 2px;
+}
+
+.calendar .header span {
+  color: var(--grey);
+  margin-left: 10px;
+}
+
+.calendar-info {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+.calendar-info span {
+  margin-left: 8px;
+  text-transform: capitalize;
+  color: var(--darkblue);
+  border-bottom: 3px dotted var(--darkblue);
+  font-weight: 700;
+}
+
+.calendar .week-days {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.calendar .week-days .normal {
+  color: var(--lightblue);
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.calendar .body .week-days .weekend {
+  color: var(--darkYelow);
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.calendar .divider {
+  width: 100%;
+  margin: auto;
+  height: 1.5px;
+  background-color: var(--grey);
+}
+
+.calendar .week {
+  background-color: white;
+  width: calc(100% / 7);
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--black);
+  font-weight: 500;
+}
+.calendar .week div {
+  width: 100%;
+}
+
+.calendar .day {
+  background-color: white;
+  /* background-color: var(--ligthYellow); */
+
+  width: calc(100% / 7);
+  height: 48px;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 1;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.calendar .day .day-card {
+  background-color: #f4f5f9;
+  height: 92%;
+  width: 92%;
+  border-radius: 8px;
+}
+
+.calendar .day div {
+  display: flex;
+  flex-direction: column;
+  width: 54px;
+  height: 42px;
+  position: relative;
+  color: var(--black);
+  z-index: 100;
+  line-height: 44px;
+}
+
+.calendar .day .disponibility {
+  margin: auto;
+  height: 4px;
+  width: 75%;
+  border-radius: 8px;
+  background: var(--green);
+  margin-top: -5px;
+}
+
+.calendar .day .undisponibility {
+  margin: auto;
+  height: 4px;
+  width: 75%;
+  border-radius: 8px;
+  background: #f08080;
+  margin-top: -5px;
+}
+
+.calendar .day div.before {
+  color: var(--grey);
+  text-align: center;
+}
+
+.calendar .day div.selected {
+  border-radius: 8px;
+  background-color: var(--darkblue);
+  color: var(--day);
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+}
+
+.footer {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 450px;
+  border-top: 1px solid var(--lightgrey);
+  padding-top: 10px;
+  margin-top: 50px;
+}
+
+.footer .btn-next {
+  background: var(--darkblue);
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.footer .btn-next span {
+  color: var(--defaultText);
+}
+
+.footer .btn-prev {
+  background: transparent;
+  text-transform: capitalize;
+}
+
+.footer .btn-prev span {
+  font-weight: bold;
+}
